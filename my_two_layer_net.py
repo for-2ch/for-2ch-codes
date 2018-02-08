@@ -40,8 +40,6 @@ class TwoLayerNet:
         
     # x:入力データ, t:教師データ
     def numerical_gradient(self, x, t):
-        loss_W = lambda W: self.loss(x, t)
-        
         grads = {}
         grads['W1'] = self.compute_numerical_gradient(x, t, self.params['W1'])
         grads['b1'] = self.compute_numerical_gradient(x, t, self.params['b1'])
